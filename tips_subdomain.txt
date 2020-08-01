@@ -1,0 +1,14 @@
+subfinder -d domain.com --silent | httprobe | tee -a subdomains.txt
+amass enum --passive -d domain.com | httprobe | tee -a subdoamins.txt
+assetfinder -subs-only domain.com | httprobe | tee -a subdomains.txt
+
+
+Find End Points
+cat subdomains.txt | waybackurls >> wayback.txt
+cat subdomains.txt | hakrawler -depth 3 -plain >> spider.txt
+
+
+Find All Parameter
+
+python3 paramspider.py --domain domain.com --exclude svg,jpg,css,js --output domainParam.txt
+cat subdomains.txt | waybackurls | grep "=" | tee -a domainParam.txt

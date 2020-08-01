@@ -1,0 +1,16 @@
+These commands from STOK and tomnomnom interview about Vi
+
+assetfinder --subs-only tesla.com > domain
+cat domain | httprobe | tee hosts
+vim hosts
+meg -d 1000 -v /
+ls
+cd out
+gf s3-bucket
+gf base64
+gf
+gf --help
+gf --list
+find . -type f | html-tool attribs src 
+find . -type f | html-tool attribs src  | grep '\.js$'
+find . -type f | html-tool tags title | vim -i
