@@ -12,3 +12,33 @@ Find All Parameter
 
 python3 paramspider.py --domain domain.com --exclude svg,jpg,css,js --output domainParam.txt
 cat subdomains.txt | waybackurls | grep "=" | tee -a domainParam.txt
+
+
+XSS Scanner
+
+assetfinder target.com | hakrawler | some-xss-scanner
+python3 xsstrike.py -u "http://redacted.org/search.php?query=&book=190"
+
+Arjun 
+python3 arjun.py -u https://api.example.com/endpoint --get
+python3 arjun.py --urls targets.txt --get
+python3 arjun.py -u https://api.example.com/endpoint --get -t 22
+python3 arjun.py -u https://api.example.com/endpoint --get -d 2
+python3 arjun.py -u https://api.example.com/endpoint --get --stable
+python3 arjun.py -u https://api.example.com/endpoint --get --include 'api_key=xxxxx'
+python3 arjun.py -u https://api.example.com/endpoint --get --include '{"api_key":"xxxxx"}'
+python3 arjun.py -u https://api.example.com/endpoint --get -o result.json
+python3 arjun.py -u https://api.example.com/endpoint --post --headers "Accept-Language: en-US\nCookie: null"
+
+XSS Scanner
+$ ./beef
+
+
+
+
+
+
+
+
+
+
