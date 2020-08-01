@@ -31,7 +31,8 @@ python3 arjun.py -u https://api.example.com/endpoint --get -o result.json
 python3 arjun.py -u https://api.example.com/endpoint --post --headers "Accept-Language: en-US\nCookie: null"
 
 XSS Scanner
-$ ./beef
+XSpear -u http://redacted.com/my-account/ -v 2
+
 
 
 
