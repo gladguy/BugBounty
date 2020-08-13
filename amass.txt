@@ -1,0 +1,31 @@
+Enumurate : 
+amass enum -src -ip -d sony.com
+
+Results of the above 
+amass db -summary -d sony.com
+
+Input to next run
+amass db -names -d sony.com
+
+amass viz -d3 -d sony.com
+
+HTML file will be created
+ls .config/amass_d3.html
+
+Get from only one source
+amass enum -src -passive -include crtsh -d sony.com
+
+
+amass enum -src -include crtsh,radb -d sony.com
+
+amass enum -src -ip -brute -df domains.txt
+
+DNSValidator
+
+
+   
+
+
+
+
+
