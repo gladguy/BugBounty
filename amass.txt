@@ -20,7 +20,7 @@ amass enum -src -include crtsh,radb -d sony.com
 
 amass enum -src -ip -brute -df domains.txt
 
-DNSValidator
+DNSValidator is used to collect IP address of DNS
 
 
    

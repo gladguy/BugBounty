@@ -1,0 +1,38 @@
+webscreenshot 2.9 
+pip install webscreenshot
+Masscan
+Photon
+Hurrican Electric BGB
+Shodan
+DNSdumpster
+Metasploit
+Sublist3r
+LazyRecon
+Top-Port-Slicer
+traceroute
+nmap
+
+
+Hurrican Electric BGB
+cut -d ' ' -f1
+sudo bin/masscan -iL cide.txtg -p 0.65535 --rate 10000 -n -Pn -oG masscan.txt
+
+cat massscan.txt | cut -d -f3
+massscan.txt | grep 'Ports : 80'
+massscan.txt | grep 'Ports : 443'
+cut -d ' ' -f3
+
+massscan.txt | grep -v 'Ports : 443'
+
+xvfb-run webscreenshot -no-xserver --renderer-binary phantomjs -r phantomjs -i http_ips.txt -p 80 -o equifx_screenshots_80 
+
+phantomjs
+
+asn AS2924
+
+shodan
+prg "Equifax" -port 443 -port 80 -port 22 
+
+cd photon
+python3 photon.py
+
