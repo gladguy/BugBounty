@@ -1,0 +1,21 @@
+FastRecon()
+{
+	
+	mkdir $1; cd $1; mkdir screens;
+	
+	subfinder -d $1 -silent -o $1_domains;
+	
+	naabu -hL $1_domains -silent -t 30 -o $1_ports;
+
+	cat $1_ports | httprobe -c 30 > $1_schemes;
+	
+	nuclei -c 30 -t ~/nuclei-templates/subdomain-takeover/detect-*.yml -silen -o $1_takeovers -l $1_schemes; 
+
+	dnsprobe -l $1_domains -o $1_ups -silent;
+	dnsprobe -l $1_domains -r CNAME -o $1_cnames -silent;
+	
+	gowitness file --source $1_schemes -d ./screens/
+
+	gowitness report generate;
+
+}
